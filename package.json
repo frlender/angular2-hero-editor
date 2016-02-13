@@ -8,8 +8,9 @@
     "jade:w": "jade -P -O {\"dev\":true} -w views/ --out ./",
     "mini":" uglifyjs main.js -c -o main-min.js",
     "jade:d":"jade -O {\"dev\":false} views/ --out ./",
+    "clean":"rm main.js",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" \"npm run jade:w\" ",
-    "deploy": "node bundle.js & npm run mini & npm run jade:d & npm run lite"
+    "deploy": "node bundle.js & npm run mini & npm run clean & npm run jade:d & npm run lite"
   },
   "license": "ISC",
   "dependencies": {
@@ -23,7 +24,7 @@
   },
   "devDependencies": {
     "concurrently": "^1.0.0",
-    "jspm": "^0.16.27"
+    "jspm": "^0.16.27",
     "glob": "^7.0.0",
     "lite-server": "^2.0.1",
     "typescript": "^1.7.5"
