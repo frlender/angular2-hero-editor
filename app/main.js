@@ -13,7 +13,8 @@ System.register(['angular2/platform/browser', './app.component', 'angular2/core'
                 core_1 = core_1_1;
             }],
         execute: function() {
-            core_1.enableProdMode();
+            if (!ENV_IS_DEV)
+                core_1.enableProdMode();
             browser_1.bootstrap(app_component_1.AppComponent);
         }
     }
