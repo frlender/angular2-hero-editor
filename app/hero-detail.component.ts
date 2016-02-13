@@ -31,9 +31,7 @@ export class HeroDetailComponent {
 	}
 
 	ngOnInit() {
-		console.log('bb');
 		let id = +this._routeParams.get('id');
-		console.log('aa',id);
 		this._heroService.getHero(id)
 			.then(hero => this.hero = hero);
 	}

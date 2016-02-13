@@ -1,4 +1,5 @@
 System.register(['angular2/router', './hero.service', 'angular2/core'], function(exports_1) {
+    "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -32,9 +33,7 @@ System.register(['angular2/router', './hero.service', 'angular2/core'], function
                 };
                 HeroDetailComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    console.log('bb');
                     var id = +this._routeParams.get('id');
-                    console.log('aa', id);
                     this._heroService.getHero(id)
                         .then(function (hero) { return _this.hero = hero; });
                 };
@@ -47,7 +46,7 @@ System.register(['angular2/router', './hero.service', 'angular2/core'], function
                     __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.RouteParams])
                 ], HeroDetailComponent);
                 return HeroDetailComponent;
-            })();
+            }());
             exports_1("HeroDetailComponent", HeroDetailComponent);
         }
     }
