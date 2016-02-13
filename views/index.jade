@@ -1,7 +1,7 @@
 html
   head
     base(href='/')
-    title frlender
+    title Angular 2 hero editor
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel="stylesheet" href="app/styles.css")
     // global control
@@ -21,7 +21,10 @@ html
     script(src='node_modules/angular2/bundles/angular2-polyfills.js')
     script(src='node_modules/systemjs/dist/system.src.js')
     script(src='node_modules/rxjs/bundles/Rx.js')
-    script(src='node_modules/angular2/bundles/angular2.dev.js')
+    if dev
+      script(src='node_modules/angular2/bundles/angular2.dev.js')
+    else
+      script(src='node_modules/angular2/bundles/angular2.js')
     script(src='node_modules/angular2/bundles/router.js')
 
     // 2. Configure SystemJS
